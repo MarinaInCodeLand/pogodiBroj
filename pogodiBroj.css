@@ -31,6 +31,7 @@ body {
     color: gold; 
     text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
     max-width: 100%; /* Da ne izlazi iz ekrana */
+
 }
 
 h1 {
@@ -50,8 +51,9 @@ p, #brojPogodaka {
 }
 
 #brojPogodaka {
-    font-style: italic;
+    font-style: italic;   
     color: #e22b8d;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
 }
 
 form {
@@ -69,7 +71,7 @@ form {
 label {  
     font-size: 24px;
     font-weight: bold;
-    text-align: left; /* Poravnanje teksta levo */
+    text-align: center; /* Poravnanje teksta levo */
     margin-bottom: 10px;  
 }
 
@@ -128,8 +130,8 @@ span {
 /* Za mobilne telefone (do 480px širine) */
 @media screen and (max-width: 480px) {
     body {
-        padding: 20px;
-        margin-top: 50px;
+        padding: 15px;
+        margin-top: 30px;
     }
 
     h1 {
@@ -140,12 +142,27 @@ span {
         font-size: 18px;
     }
 
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     label {
         text-align: center; /* Centriraj label na telefonima */
         display: block; /* Da bude u svom redu */
         width: 100%; /* Da zauzme ceo red */
+        margin-bottom: 10px;
     }
 
+    input[type="number"], .dugme {
+        width: 80%;
+        max-width: 300px;
+        margin: 5px 0;
+        font-size: 16px;
+        padding: 10px;
+    }
+/*
     input[type="number"] {
         width: 80px;
         font-size: 14px;
@@ -155,7 +172,7 @@ span {
         font-size: 16px;
         padding: 6px 10px;
     }
-
+*/
     #poruka {
         font-size: 20px;
     }
