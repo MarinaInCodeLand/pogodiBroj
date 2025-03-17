@@ -1,14 +1,23 @@
 html {
     font-family: "Ysabeau", sans-serif;   
     background-image: url('images/Las_Vegas.jpg');
+    
+    /* Centriramo sliku */
     background-position: center;
+        
+    /* Da se slika NE ponavlja ako je manja od ekrana */
     background-repeat: no-repeat;
+        
+    /* Slika da se prilagodi veličini ekrana */
     background-size: cover;
-    background-color: #f0f0f0;
+        
+    /* Boja pozadine iza slike (u slučaju da slika nije dovoljno velika da pokrije ceo ekran) */
+    background-color: #f0f0f0;  
+
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Zasigurno zauzima celu visinu ekrana */
+    height: 100vh; /* Da sigurno zauzima celu visinu ekrana */
     margin: 0;
 }
 
@@ -17,6 +26,7 @@ body {
     border: solid 1px whitesmoke;
     border-radius: 15px;
     padding: 50px;
+    margin-top: 100px;
     text-align: center;
     color: gold; 
     text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
@@ -33,9 +43,15 @@ h1 {
 p, #brojPogodaka {
     font-family: "Rubik Wet Paint", system-ui;
     font-weight: 400;
+    font-style: normal;
     font-size: 25px;
     color: #8a2be2;
     text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 15px #00ffff;
+}
+
+#brojPogodaka {
+    font-style: italic;
+    color: #e22b8d;
 }
 
 form {
@@ -44,14 +60,17 @@ form {
     padding: 20px;
     border-radius: 10px;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-}
+    align-items: center;
+    gap: 10px; /* Razmak između dugmadi */
+    justify-content: center; /* Centriranje dugmadi */
 
-label {    
-    font-size: 32px;
+}
+    
+label {  
+    font-size: 24px;
     font-weight: bold;
+    text-align: left; /* Poravnanje teksta levo */
+    margin-bottom: 10px;  
 }
 
 input[type="number"] {
@@ -69,28 +88,36 @@ input[type="number"] {
     font-family: "Honk", system-ui;
     background-color: #6A0DAD;
     text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 15px #00ffff;
-    border: none;
-    padding: 10px 15px;
-    font-size: 22px;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s;
+    border: none; /* Bez ivica */
+    padding: 10px 15px; /* Dodavanje prostora unutar dugmeta */
+    font-size: 22px; /* Veličina fonta */
+    color: white; /* Bela boja teksta */
+    border-radius: 5px; /* Zaobljena ivica */
+    cursor: pointer; /* Kursor u obliku ruke kad prelazi preko dugmeta */
+    transition: 0.3s; /* Efekat prelaza boje */
 }
 
 .dugme:hover {
-    background: gold;
+    background: gold; /* Zlatna kad se pređe mišem */
+}
+
+#forma {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 #poruka {
-    margin-top: 10px;
+    margin-top: 10px;  /* moze i u % */
     font-weight: 700;  
     display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-size: 30px;   
-    width: 100%;
+    justify-content: center;  /* Centriranje horizontalno */
+    align-items: center;  /* Centriranje vertikalno */
+    text-align: center;  
+    font-size: 30px;  /* Kad povecam na npr 160px deformise se sveee */   
+
+    width: 100%;  /* da se proteže preko celog roditelja */
+
     text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 15px #00ffff;
 }
 
@@ -119,8 +146,8 @@ span {
     }
 
     .dugme {
-        font-size: 18px;
-        padding: 8px 12px;
+        font-size: 16px;
+        padding: 6px 10px;
     }
 
     #poruka {
@@ -130,6 +157,11 @@ span {
     .fa-solid, .fa-regular {
         font-size: 20px;
     }
+
+    span {
+        font-size: 20px;
+    }
+
 }
 
 /* Za tablete (od 481px do 768px širine) */
@@ -157,11 +189,19 @@ span {
         padding: 9px 14px;
     }
 
-    .fa-solid, .fa-regular {
+    .fa-solid {
+        font-size: 25px;
+    }
+
+    .fa-regular {
         font-size: 25px;
     }
 
     #poruka {
+        font-size: 25px;
+    }
+
+    span {
         font-size: 25px;
     }
 }
