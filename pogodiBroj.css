@@ -68,6 +68,9 @@ form {
     gap: 10px; /* Razmak između dugmadi */
     justify-content: center; /* Centriranje dugmadi */
 
+    max-width: 90%; /* Da ne prelazi ekran */
+    width: 100%;
+
 }
     
 label {  
@@ -160,23 +163,14 @@ span {
     }
 
     input[type="number"], .dugme {
-        width: 80%;
-        max-width: 300px;
         margin: 5px 0;
         font-size: 16px;
         padding: 10px;
-    }
-/*
-    input[type="number"] {
-        width: 80px;
-        font-size: 14px;
+
+        width: 100%; /* Da popuni okvir ravnomerno */
+        max-width: 250px; /* Ograničavanje širine */
     }
 
-    .dugme {
-        font-size: 16px;
-        padding: 6px 10px;
-    }
-*/
     #poruka {
         font-size: 20px;
     }
