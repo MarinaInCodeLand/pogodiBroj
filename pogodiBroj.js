@@ -33,7 +33,7 @@ function pogodiBroj() {
 
     // Ako je broj prešao maksimalni broj pokušaja
     if (brojPokusaja >= maxBrojPokusaja) {
-        poruka.innerHTML = `<span style="color: gold;">Izgubili ste! <br><i class="fa-regular fa-thumbs-down"></i><br> Tačan broj je bio <i class="fa-regular fa-hand-point-right"></i> ${randomBroj}</span>`;
+        poruka.innerHTML = `<span style="color: red;">Izgubili ste! <br><i class="fa-regular fa-thumbs-down"></i><br> Tačan broj je bio <i class="fa-regular fa-hand-point-right"></i> ${randomBroj}</span>`;
         setTimeout(novaIgra, 3000); // Pokreće novu igru posle 3 sekunde
         return; // Prekida se funkcija, jer je igrač iskoristio sve pokušaje
     }
