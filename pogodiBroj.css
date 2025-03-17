@@ -1,26 +1,15 @@
 html {
     font-family: "Ysabeau", sans-serif;   
     background-image: url('images/Las_Vegas.jpg');
-    
-    /* Centriramo sliku */
     background-position: center;
-        
-    /* Da se slika NE ponavlja ako je manja od ekrana */
     background-repeat: no-repeat;
-        
-    /* Slika da se prilagodi veličini ekrana */
     background-size: cover;
-        
-    /* Boja pozadine iza slike (u slučaju da slika nije dovoljno velika da pokrije ceo ekran) */
-    background-color: #f0f0f0;  
-        
-    /* Da se pozadina ne pomera prilikom skrolovanja stranice */
-    /* background-attachment: fixed; ne radi dobro na mobilnim telefonima */
-    background-attachment: scroll;
-
+    background-color: #f0f0f0;
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100vh; /* Zasigurno zauzima celu visinu ekrana */
+    margin: 0;
 }
 
 body {
@@ -28,40 +17,24 @@ body {
     border: solid 1px whitesmoke;
     border-radius: 15px;
     padding: 50px;
-    margin-top: 100px;
     text-align: center;
     color: gold; 
     text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+    max-width: 100%; /* Da ne izlazi iz ekrana */
 }
 
 h1 {
     font-family: "Nabla", system-ui;
-    font-optical-sizing: auto;
     font-weight: 400;
-    font-style: normal;
-    font-variation-settings:
-      "EDPT" 100,
-      "EHLT" 12;
-
     text-transform: uppercase;
     font-size: 32px;    
 }
 
-p {
+p, #brojPogodaka {
     font-family: "Rubik Wet Paint", system-ui;
     font-weight: 400;
-    font-style: normal;
     font-size: 25px;
     color: #8a2be2;
-    text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 15px #00ffff;
-}
-
-#brojPogodaka {
-    font-family: "Rubik Wet Paint", system-ui;
-    font-weight: 400;
-    font-style: italic;
-    font-size: 25px;
-    color: #e22b8d;
     text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 15px #00ffff;
 }
 
@@ -70,13 +43,12 @@ form {
     background: rgba(255, 255, 255, 0.1);
     padding: 20px;
     border-radius: 10px;
-    display: inline-block;
-    margin-top: 40px;
-    flex-direction: row; /* Postavlja dugmad horizontalno */
-    justify-content: space-between; /* Razmak između njih */ 
-
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
 }
-    
+
 label {    
     font-size: 32px;
     font-weight: bold;
@@ -95,34 +67,30 @@ input[type="number"] {
 
 .dugme {
     font-family: "Honk", system-ui;
-
     background-color: #6A0DAD;
     text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 15px #00ffff;
-    border: none; /* Bez ivica */
-    padding: 10px 15px; /* Dodavanje prostora unutar dugmeta */
-    margin: 10px 5px;
-    font-size: 22PX; /* Veličina fonta */
-    color: white; /* Bela boja teksta */
-    border-radius: 5px; /* Zaobljena ivica */
-    cursor: pointer; /* Kursor u obliku ruke kad prelazi preko dugmeta */
-    transition: 0.3s; /* Efekat prelaza boje */
+    border: none;
+    padding: 10px 15px;
+    font-size: 22px;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
 .dugme:hover {
-    background: gold; /* Zlatna kad se pređe mišem */
+    background: gold;
 }
 
 #poruka {
-    margin-top: 10px;  /* moze i u % */
+    margin-top: 10px;
     font-weight: 700;  
     display: flex;
-    justify-content: center;  /* Centriranje horizontalno */
-    align-items: center;  /* Centriranje vertikalno */
-    text-align: center;  
-    font-size: 30px;  /* Kad povecam na npr 160px deformise se sveee */   
-
-    width: 100%;  /* da se proteže preko celog roditelja */
-
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 30px;   
+    width: 100%;
     text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 15px #00ffff;
 }
 
@@ -159,11 +127,7 @@ span {
         font-size: 20px;
     }
 
-    .fa-solid {
-        font-size: 20px;
-    }
-
-    .fa-regular {
+    .fa-solid, .fa-regular {
         font-size: 20px;
     }
 }
@@ -193,11 +157,7 @@ span {
         padding: 9px 14px;
     }
 
-    .fa-solid {
-        font-size: 25px;
-    }
-
-    .fa-regular {
+    .fa-solid, .fa-regular {
         font-size: 25px;
     }
 
