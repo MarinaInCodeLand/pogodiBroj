@@ -1,0 +1,207 @@
+html {
+    font-family: "Ysabeau", sans-serif;   
+    background-image: url('images/Las_Vegas.jpg');
+    
+    /* Centriramo sliku */
+    background-position: center;
+        
+    /* Da se slika NE ponavlja ako je manja od ekrana */
+    background-repeat: no-repeat;
+        
+    /* Slika da se prilagodi veličini ekrana */
+    background-size: cover;
+        
+    /* Boja pozadine iza slike (u slučaju da slika nije dovoljno velika da pokrije ceo ekran) */
+    background-color: #f0f0f0;  
+        
+    /* Da se pozadina ne pomera prilikom skrolovanja stranice */
+    /* background-attachment: fixed; ne radi dobro na mobilnim telefonima */
+    background-attachment: scroll;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    background-color: rgba(71, 66, 71, 0.6);
+    border: solid 1px whitesmoke;
+    border-radius: 15px;
+    padding: 50px;
+    margin-top: 100px;
+    text-align: center;
+    color: gold; 
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+}
+
+h1 {
+    font-family: "Nabla", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+      "EDPT" 100,
+      "EHLT" 12;
+
+    text-transform: uppercase;
+    font-size: 32px;    
+}
+
+p {
+    font-family: "Rubik Wet Paint", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 25px;
+    color: #8a2be2;
+    text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 15px #00ffff;
+}
+
+#brojPogodaka {
+    font-family: "Rubik Wet Paint", system-ui;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 25px;
+    color: #e22b8d;
+    text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 15px #00ffff;
+}
+
+form {
+    font-family: "Honk", system-ui;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
+    margin-top: 40px;
+    flex-direction: row; /* Postavlja dugmad horizontalno */
+    justify-content: space-between; /* Razmak između njih */ 
+
+}
+    
+label {    
+    font-size: 32px;
+    font-weight: bold;
+}
+
+input[type="number"] {
+    width: 100px;
+    padding: 5px;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid #fff;
+    background: white;
+    color: #6A0DAD;
+}
+
+.dugme {
+    font-family: "Honk", system-ui;
+
+    background-color: #6A0DAD;
+    text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 15px #00ffff;
+    border: none; /* Bez ivica */
+    padding: 10px 15px; /* Dodavanje prostora unutar dugmeta */
+    margin: 10px 5px;
+    font-size: 22PX; /* Veličina fonta */
+    color: white; /* Bela boja teksta */
+    border-radius: 5px; /* Zaobljena ivica */
+    cursor: pointer; /* Kursor u obliku ruke kad prelazi preko dugmeta */
+    transition: 0.3s; /* Efekat prelaza boje */
+}
+
+.dugme:hover {
+    background: gold; /* Zlatna kad se pređe mišem */
+}
+
+#poruka {
+    margin-top: 10px;  /* moze i u % */
+    font-weight: 700;  
+    display: flex;
+    justify-content: center;  /* Centriranje horizontalno */
+    align-items: center;  /* Centriranje vertikalno */
+    text-align: center;  
+    font-size: 30px;  /* Kad povecam na npr 160px deformise se sveee */   
+
+    width: 100%;  /* da se proteže preko celog roditelja */
+
+    text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 15px #00ffff;
+}
+
+span {
+    font-family: "Rubik Wet Paint", system-ui;
+}
+
+/* Za mobilne telefone (do 480px širine) */
+@media screen and (max-width: 480px) {
+    body {
+        padding: 20px;
+        margin-top: 50px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    p, #brojPogodaka {
+        font-size: 18px;
+    }
+
+    input[type="number"] {
+        width: 80px;
+        font-size: 14px;
+    }
+
+    .dugme {
+        font-size: 18px;
+        padding: 8px 12px;
+    }
+
+    #poruka {
+        font-size: 20px;
+    }
+
+    .fa-solid {
+        font-size: 20px;
+    }
+
+    .fa-regular {
+        font-size: 20px;
+    }
+}
+
+/* Za tablete (od 481px do 768px širine) */
+@media screen and (max-width: 768px) {
+    body {
+        padding: 30px;
+        margin-top: 70px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    p, #brojPogodaka {
+        font-size: 22px;
+    }
+
+    input[type="number"] {
+        width: 90px;
+        font-size: 16px;
+    }
+
+    .dugme {
+        font-size: 20px;
+        padding: 9px 14px;
+    }
+
+    .fa-solid {
+        font-size: 25px;
+    }
+
+    .fa-regular {
+        font-size: 25px;
+    }
+
+    #poruka {
+        font-size: 25px;
+    }
+}

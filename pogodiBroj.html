@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ysabeau:ital,wght@0,1..1000;1,1..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Honk&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nabla&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&display=swap" rel="stylesheet">  
+    <link rel="stylesheet" href="pogodiBroj.css">
+    <script src="pogodiBroj.js"></script>
+    <title>Pogodi Broj</title>
+</head>
+<body>
+    <h1>Pogodi broj</h1>
+
+    <p>Izabrali smo jedan broj između 1 i 100. <br><br>Probajte da ga pogodite!</p>
+    <div id="brojPogodaka">Imate pravo da pogađate tri puta.</div>
+
+    <form>
+        <label for="unetiBroj">Unesite broj:</label>
+        <input type="number" name="unetiBroj" id="unetiBroj">
+        <input type="button" class="dugme" value="Pogađaj!" onclick="pogodiBroj();">
+        <input type="button" class="dugme" value="Nova igra!" onclick="novaIgra();">
+    </form>
+
+    <div id="poruka"></div>
+
+</body>
+</html>
