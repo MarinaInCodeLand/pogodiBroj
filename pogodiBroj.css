@@ -140,6 +140,12 @@ span {
         font-size: 18px;
     }
 
+    label {
+        text-align: center; /* Centriraj label na telefonima */
+        display: block; /* Da bude u svom redu */
+        width: 100%; /* Da zauzme ceo red */
+    }
+
     input[type="number"] {
         width: 80px;
         font-size: 14px;
