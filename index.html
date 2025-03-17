@@ -20,10 +20,13 @@
     <div id="brojPogodaka">Imate pravo da pogađate tri puta.</div>
 
     <form>
-        <label for="unetiBroj">Unesite broj:</label>
-        <input type="number" name="unetiBroj" id="unetiBroj">
-        <input type="button" class="dugme" value="Pogađaj!" onclick="pogodiBroj();">
-        <input type="button" class="dugme" value="Nova igra!" onclick="novaIgra();">
+        <div id="forma">
+            <label for="unetiBroj">Unesite broj:</label>
+            <input type="number" name="unetiBroj" id="unetiBroj" min="1" max="100">
+            <input type="button" class="dugme" value="Pogađaj!" onclick="pogodiBroj();" >
+            <input type="button" class="dugme" value="Nova igra!" onclick="novaIgra();">
+        </div>
+
     </form>
 
     <div id="poruka"></div>
